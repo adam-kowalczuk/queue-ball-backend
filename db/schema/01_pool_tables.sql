@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS pool_tables CASCADE;
+
+CREATE TABLE pool_tables(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255),
+  is_available BOOLEAN NOT NULL
+);
