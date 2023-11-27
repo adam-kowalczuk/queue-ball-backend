@@ -11,24 +11,16 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "wss://queue-ball-backend-production.up.railway.app"
+    origin: "https://cosmic-khapse-1d3ddf.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"]
   }
 });
 
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://cosmic-khapse-1d3ddf.netlify.app"
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
 
 const playerApiRoutes = require("./routes/players-api");
 const tableApiRoutes = require("./routes/tables-api");
