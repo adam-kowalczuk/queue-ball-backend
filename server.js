@@ -11,7 +11,7 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:8080/"
+    origin: "https://queue-ball-backend-production.up.railway.app"
   }
 });
 
