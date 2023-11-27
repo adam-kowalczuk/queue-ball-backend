@@ -11,8 +11,7 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://cosmic-khapse-1d3ddf.netlify.app",
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    origin: "https://cosmic-khapse-1d3ddf.netlify.app"
   }
 });
 
