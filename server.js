@@ -11,7 +11,7 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://queue-ball-backend-production.up.railway.app"
+    origin: "https://cosmic-khapse-1d3ddf.netlify.app/"
   }
 });
 
