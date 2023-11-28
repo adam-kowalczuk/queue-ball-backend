@@ -18,7 +18,7 @@ const io = socketIo(server, {
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-// app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 
 const playerApiRoutes = require("./routes/players-api");
